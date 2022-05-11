@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Website Icon -->
+        <link rel="icon" href="images/website_icon.png">
+
+        <!-- Website Title -->
+        <title>Login Page</title>
+
+        <!-- External CSS -->
+        <link rel="stylesheet" href="/styles/css/index.css">
+        <link rel="stylesheet" href="/styles/css/footer.css">
+
+        <!-- Font Awesome Fonts -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>        
+
+        <style>
+            html{
+                width:100vw;
+                height:100vh;
+            }
+            body{
+                width:100%;
+                height:100;
+                margin : 0;
+                padding:0;
+                background-color:#eaeef1;
+                /*background-size:cover;*/
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 1375px 800px;
+                font-family: sans-serif;
+            }
+            .alumnireg{
+               width: 400px;
+               height: 400px;
+               background :#fff;
+               color : #fff;
+               top:50%;
+               left:50%;
+               position : absolute;
+               transform : translate(-50%,-50%);
+               box-sizing: border-box;
+               padding: 40px 40px;
+            }
+            h1{
+               font-size: 22px;
+               color : black;
+               text-align: center;
+               margin: 0;
+               padding : 0 0 20px;
+            }
+            .alumnireg  input{
+               width:100%;
+               margin-bottom: 20px;
+               margin-top: 10px;
+            }
+            .alumnireg input[type="text"]
+            {
+              border:none;
+              border-bottom: 1px solid black;
+              background: transparent;
+              outline : none;
+              height: 30px;
+            }
+            .alumnireg input[type="password"]
+            {
+              border:none;
+              border-bottom: 1px solid black;
+              background: transparent;
+              outline : none;
+              height: 30px;
+            }
+            .alumnireg input[type="email"]
+            {
+              border:none;
+              border-bottom: 1px solid black;
+              background: transparent;
+              outline : none;
+              height: 30px;
+            }
+            .alumnireg input[type="submit"]
+            {
+               border : none;
+               outline :none;
+               height :40px;
+               width: 320px;
+               background : rgb(28, 102, 175);
+               color:#fff;
+               font-size: 18px;
+               border-radius: 5px;
+            }
+            .alumnireg input[type="submit"] :hover{
+               cursor : pointer;
+               background: #00498D;
+               color : #000;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <%- include('./header.ejs') %>
+        <div class="alumnireg">
+            <% if(type==="login"){ %>
+                <h1>ADMIN LOGIN</h1>
+                <form action="/admin-login" method="post">
+                    <input type="email" required name="email" placeholder="Admin Email" ><br><br>
+                    <input type="password" required name="password" placeholder= "Enter password" ><br><br>
+                    
+                    <input type="submit" value="SUBMIT"><br><br>
+                   
+                </form>
+            <% } %>
+            
+        </div>
+        <%- include('./footer.ejs') %>
+    </body>
+</html>

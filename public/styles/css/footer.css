@@ -1,0 +1,12 @@
+footer{
+    position:relative;
+    top:90vh;
+    height:65px;
+    background-color: #121212;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important; */
+    -webkit-box-shadow: 0px 0px 14px 0px rgb(0 0 0 / 75%);
+}
+footer .footer_copyright{
+    margin:0 auto;
+    color:white;
+}

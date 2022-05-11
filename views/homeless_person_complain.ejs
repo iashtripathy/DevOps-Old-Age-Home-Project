@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Website Icon -->
+    <link rel="icon" href="images/website_icon.png">
+
+    <!-- Website Title -->
+    <title>Homeless Person Data</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/styles/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/styles/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/styles/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/styles/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/styles/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/styles/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/styles/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/styles/css/main.css">
+<!--===============================================================================================-->
+
+
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles/css/index.css">
+
+    <!-- Font Awesome Fonts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  </head>
+
+  <body>
+
+    <%- include('./header.ejs') %>
+
+</head>
+<body>
+	
+	<div class="limiter" style="background:#d9e7e8 !important;">
+		
+		<div class="container-table100">
+			<h2 style="margin-top:10vh;">HOMELESS SENIOR CITIZENS DATA</h2>
+			<div class="wrap-table100" style="width:90vw;">
+				
+				<div class="table100 ver1">
+					<div class="table100-firstcol" style="height:100%;z-index:1000;">
+						
+						<table style="height:100%;">
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Reported Person Name</th>
+								</tr>
+							</thead>
+							<tbody>
+                                <% for(var i = 0; i< records.length; i++ ) {%>
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1"><%= records[i].fullname %></td>
+                                    </tr>
+                                <% } %>
+							</tbody>
+						</table>
+					</div>
+					
+					<div class="wrap-table100-nextcols js-pscroll">
+						<div class="table100-nextcols">
+							<table>
+								<thead>
+									<tr class="row100 head">
+										<th class="cell100 column2">Email</th>
+										<th class="cell100 column3">State</th>
+										<th class="cell100 column4">District</th>
+										<th class="cell100 column5">Phone No</th>
+										<th class="cell100 column6">Address</th>
+										<th class="cell100 column7">Description</th>
+										<th class="cell100 column8">Image</th>
+									</tr>
+                                </thead>
+                                
+								<tbody>
+                                    <% for(var i = 0; i< records.length; i++ ) {%>
+                                        <tr class="row100 body">
+                                            <td class="cell100 column2" style="padding-left:0px;"><%=records[i].email%></td>
+                                            <td class="cell100 column3"><%=records[i].state%></td>
+                                            <td class="cell100 column4"><%=records[i].district%></td>
+                                            <td class="cell100 column5"><%=records[i].phone%></td>
+                                            <td class="cell100 column6"><%=records[i].landmark%></td>
+                                            <td class="cell100 column7"><%=records[i].description%></td>
+                                            <td class="cell100 column8"><img style="width:100px;height:100px;" src="uploads/<%=records[i].filename%>" alt="Admin" class="rounded-circle" width="150"></td>
+                                        </tr>
+                                    <% } %> 
+									
+
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer Section -->
+    <%- include('./footer.ejs') %>
+
+<!--===============================================================================================-->	
+	<script src="/styles/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/styles/vendor/bootstrap/js/popper.js"></script>
+	<script src="/styles/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/styles/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/styles/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+
+			$(this).on('ps-x-reach-start', function(){
+				$(this).parent().find('.table100-firstcol').removeClass('shadow-table100-firstcol');
+			});
+
+			$(this).on('ps-scroll-x', function(){
+				$(this).parent().find('.table100-firstcol').addClass('shadow-table100-firstcol');
+			});
+
+		});
+
+		
+		
+		
+	</script>
+
+<!--===============================================================================================-->
+	<script src="../main.js"></script>
+
+
+
+
+</body>
+</html>

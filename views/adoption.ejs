@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <!-- Website Icon -->
+    <link rel="icon" href="images/website_icon.png">
+
+    <!-- Website Title -->
+    <title>Adoption</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles/css/adoption.css">
+    
+    <!-- Font Awesome Fonts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  </head>
+
+  <body>
+
+     <!-- Header Section -->
+    <%- include('./header.ejs') %>
+
+    <!-- Introduction Section -->
+    <div class="intro_section">
+
+      <img class="intro_image" src="images/adoption_image_1.jpg" alt="adoption_image">
+
+      <div class="intro_lines">
+        <p class="intro_heading">A NOBLE CAUSE</p>
+        <p class="intro_description">There are lakhs of homeless people in the country.Even we are able to change the life of 10 percentage of them by providing them the basuc needs or even adopting them that would be a huge contribute to the society.So lets put our hands together and do the needful to bring a change in their lives.</p>
+      </div>
+
+    </div>
+
+
+
+    <!-- Form Section -->
+    <div class="form_section">
+
+      <p class="form_heading">Book a Meeting</p>
+
+     
+
+      <p class="form_description" style="margin-top:20px;">Kindly fill this form to book a meeting with us and we will guide you in this process of adopting a person from beginning to end with no charge at all.</p>
+
+      
+
+      <form class="meeting_form" action="/adoption" method="post">
+
+        <div class="contact_textbox">
+          <input type="text" name="fullname" value="" placeholder="FULL NAME*" required>
+        </div>
+
+        <label class="contact_label" for="">Gender</label>
+        <div class="contact_textbox_selectors">
+          <input type="radio" name="gender" value="male" required> Male
+          <input type="radio" name="gender" value="female"> Female
+        </div>
+
+        <label class="contact_label" for="">Married</label>
+        <div class="contact_textbox_selectors">
+          <input type="radio" name="marriage" value="yes" required> Yes
+          <input type="radio" name="marriage" value="no"> No
+        </div>
+
+        <div class="contact_textbox">
+          <input type="number" name="age" value="" placeholder="AGE*(ENTER BETWEEN 25 AND 50)" required>
+        </div>
+
+        <div class="contact_textbox">
+          <input type="email" name="email" value="" placeholder="EMAIL">
+        </div>
+
+        <div class="contact_textbox">
+          <input type="text" name="address" value="" placeholder="ADDRESS">
+        </div>
+
+        <div class="contact_textbox">
+          <input type="text" name="job" value="" placeholder="YOUR JOB DESCRIPTION">
+        </div>
+
+        <div class="contact_textbox">
+          <input type="number" name="income" value="" placeholder="YOUR ANNUAL INCOME*" required>
+        </div>
+
+        <div class="contact_textbox">
+          <input type="number" name="phonenumber" value="" placeholder="PHONE NUMBER*" required>
+        </div>
+
+        <label class="contact_label" for="">Your preferred date for meeting</label>
+        <div class="contact_date_input">
+          <input type="date" id="meeting_date" name="meeting">
+        </div>
+
+        <label class="contact_label" for="">Your preferred time for meeting</label>
+        <div class="contact_textbox_selectors">
+          <input type="radio" name="time" value="morning" required> Morning
+          <input type="radio" name="time" value="afternoon"> Afternoon
+          <input type="radio" name="time" value="evening"> Evening
+        </div>
+
+        <div class="contact_textbox">
+          <textarea name="reason" rows="9" placeholder="REASON FOR ADOPTION"></textarea>
+        </div>
+
+        <button class="contact_button" name="book">BOOK</button>
+
+      </form>
+
+    </div>
+
+    <!-- Footer Section -->
+    <%- include('./footer.ejs') %>
+
+  </body>
+</html>

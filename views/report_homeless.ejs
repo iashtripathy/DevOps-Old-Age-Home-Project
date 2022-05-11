@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <!-- Website Icon -->
+    <link rel="icon" href="images/website_icon.png">
+
+    <!-- Website Title -->
+    <title>Old Age Home</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles/css/child_labour.css">
+
+    <!-- Font Awesome Fonts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  </head>
+
+  <body>
+
+    <%- include('./header.ejs') %>
+
+    <!-- Introduction Section -->
+    <div class="intro_section">
+
+      <img class="intro_image" src="images/old_age_abuse.webp" alt="adoption_image">
+
+      <div class="intro_lines">
+        <p class="intro_heading">STOP THE CRIME!</p>
+        <p class="intro_description">The rapidly increasing population of elderly people has been accompanied by a number of challenges to the elderly, communities, and the state.The elderly have increasingly become more vulnerable to physical, financial, and emotional abuse. In many cases, citizens who are aware of these abuses may fail to report to the police or the elderly people themselves may fear engaging in legal battles.A salient factor which has been cited as aggravating the abuse of the senior citizens is the limited social services which the elderly people are receiving.One should know that these crimes are punishable seriously under the law.Kindly report such crimes to us.</p>
+      </div>
+
+    </div>
+
+    <!-- Family Section -->
+    <div class="family_section">
+
+      <p class="family_heading">LET'S TAKE A STAND !</p>
+
+
+
+      <div class="family_images" style="margin-top:20px;">
+        <img src="images/old_age_abuse_1.jpg" alt="family_image_1">
+        <img src="images/old_age_abuse_2.jpg" alt="family_image_2">
+        <img src="images/old_age_abuse_3.webp" alt="family_image_3">
+      </div>
+
+      <p class="family_description">Elder abuse is an important public health problem. A 2017 review of 52 studies in 28 countries from diverse regions estimated that over the past year 1 in 6 people (15.7%) aged 60 years and older were subjected to some form of abuse (1). Although rigorous data are limited, the review provides prevalence estimates of the proportion of older people affected by different types of abuse.We should take a stand to prevent it as much as possible.</p>
+
+    </div>
+
+    <!-- Form Section -->
+    <div class="form_section" style="font-family:arial">
+
+      <p class="form_heading">HELP THE HOMELESS PERSON</p>
+
+
+
+      <p class="form_description" style="margin-top:20px;">If you see this happening anywhere, please report us and we will try our best to help them and help them to live a better life.</p>
+
+      <form class="meeting_form" action="/report-homeless" method="post" enctype="multipart/form-data">
+
+        <div class="contact_textbox">
+          <input type="text" name="fullname" value="" placeholder="YOUR FULL NAME*" required>
+        </div>
+
+        <div class="contact_textbox">
+          <input type="email" name="email" value="" placeholder="YOUR EMAIL">
+        </div>
+
+        <div class="contact_textbox">
+          <input type="number" name="phone" value="" placeholder="YOUR PHONE NUMBER*" required>
+        </div>
+
+        <div class="contact_textbox">
+          <input type="text" name="state" value="" placeholder="STATE WHERE YOU SAW THE OLD PERSON*" required>
+        </div>
+
+        <div class="contact_textbox">
+          <input type="text" name="district" value="" placeholder="DISTRICT WHERE YOU SAW THE OLD PERSON*" required>
+        </div>
+
+        <div class="contact_textbox">
+          <input type="text" name="landmark" value="" placeholder="ADDRESS/LANDMARK WHERE YOU SAW THE OLD PERSON">
+        </div>
+
+        <label class="contact_label" for="">Image (if available)</label>
+        <div class="contact_textbox" style="margin-top:0.5rem;">
+          <input type="file" id="myFile" name="filename">
+        </div>
+
+        <div class="contact_textbox">
+          <textarea name="description" rows="9" placeholder="DESCRIPTION OF THE OLD PERSON"></textarea>
+        </div>
+
+        <button class="contact_button" name="complain">COMPLAIN</button>
+
+      </form>
+
+    </div>
+
+    <!-- Footer Section -->
+    <%- include('./footer.ejs') %>
+
+  </body>
+</html>

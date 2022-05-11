@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <!-- Website Icon -->
+    <link rel="icon" href="images/website_icon.png">
+
+    <!-- Website Title -->
+    <title>Home - Old Age Home</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles/css/index.css">
+
+
+    <!-- Font Awesome Fonts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  </head>
+
+  <body>
+
+    <%- include('./header.ejs') %>
+
+    <!-- Introduction Section -->
+    <div class="intro_section">
+
+      <img class="intro_image" src="images/website_logo.png" alt="website_logo">
+
+      <div class="intro_lines">
+        <p class="intro_heading">WHO ARE WE?</p>
+        <p class="intro_description">Poor old aged people undergoing great difficulties lacking & logging in love and affection and always are into mental stress, strain, for this reason, we started "Old Age Home Website for Poor Elders" with humanity and service to cater to the needs of such unfortunate elders.The aim of this website is to the connect the homeless old people to the people who would wish to adopt them and also keep a track of the homeless person,Reporting any crimes being comitted against the old homeless people,Helping them financially and bu providing the basic needs.We sponsor elders boarding & lodging facilities with breakfast, lunch, dinner, Medical care, T.V for recreation.</p>
+      </div>
+
+    </div>
+
+
+    <!-- Adoption Section -->
+    <div class="adopt_section">
+
+      <div class="adopt_lines">
+        <p class="adopt_heading">ADOPTION</p>
+        <p class="adopt_description">There are lakhs of homeless people in the country.Even we are able to change the life of 10% of them by adopting them and providing them with the basic needs then that would be a huge contribute to the society.</p>
+      </div>
+
+      <img class="adopt_image" src="images/adopt_logo.png" alt="heart_image">
+
+    </div>
+
+    <!-- Pillars Section -->
+    <div class="pillars_section">
+
+      <p class="pillars_heading">OUR PILLARS</p>
+
+      
+
+      
+
+      <div class="pillars_cards">
+
+        <div class="pillars_card">
+
+          <img class="pillars_card_image" src="images/home.jpeg" alt="home_image">
+
+          <p class="pillars_card_heading">OUR HOME</p>
+          <p class="pillars_card_description"> Our Old Age homes are the best ones with properly furnished goods.</p>
+
+        </div>
+
+        <div class="pillars_card">
+
+          <img class="pillars_card_image" src="images/old_age_home_games.webp" alt="school_image">
+
+          <p class="pillars_card_heading">INDOOR NGAMES</p>
+          <p class="pillars_card_description">There are a lot of games that we have and which we organize in our old age homes.Everyone would be able to participate in them and enjoy to the fullest. </p>
+
+        </div>
+
+        <div class="pillars_card">
+
+          <img class="pillars_card_image" src="images/old_age_fun.jpg" alt="farm_image">
+
+          <p class="pillars_card_heading">FUN ACTIVITIES</p>
+          <p class="pillars_card_description">We organize a huge number of fun activities at our old age homes which all the senior citizens can participate in and enjoy a lot.We organize parites and social gatherings,gardening activities,teaching music etc. </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Donation Section -->
+    <div class="donation_section">
+
+      <img class="donation_image" src="images/donation_image.jpg" alt="donation_image">
+
+      <div class="donation_lines">
+        <p class="donation_heading">DONATIONS</p>
+        <p class="donation_description">We request you to help and donate online to charity generously to feed the hungry poor oldage persons in elderly home. Your donation helps to make a difference in someone's lives and create hope on their lives. Beneficiaries always expressing sincere gratitude towards your kind generous donations. Donations in the form of money,basic needs are accepted.Kindly donate to our noble cause of the poor old age people in oldagehome.</p>
+      </div>
+
+    </div>
+
+    <div class="cl_section">
+
+      <div class="cl_lines">
+        <p class="cl_heading">ABUSING SENIOR CITIZENS</p>
+        <p class="cl_description">Elder abuse can be referred to as a single or repeated act or lack of appropriate action, occurring within any relationship where there is an expectation of trust, which causes harm or distress to an older person. Elderly people often get abuse by people who should be their protector and carer, in most circumstances many elderly adults are abused in their own homes, in relatives’ homes, and even in facilities responsible for their care. If you suspect that an elderly person is at risk from a neglectful or overwhelmed caregiver, or being preyed upon financially, it’s important to speak up.Abusing elder people is punishable offence under the law.</p>
+      </div>
+
+      <img class="cl_image" src="images/old_age_abuse.webp" alt="child_labour_image">
+
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact_section">
+
+      <p class="contact_heading">Get In Touch With Us.</p>
+
+      
+
+      <p class="contact_description">If you would like to contact our organization, if you have any questions/concerns/thoughts/suggestions, feel free to contact us using the form below. We would love to hear from you and will endeavor to reply as soon as possible.</p>
+
+      <form class="contact_form" action="/" method="post">
+
+        <div class="contact_textbox">
+          <input type="text" name="fullname" value="" placeholder="FULL NAME*" required>
+        </div>
+
+        <div class="contact_textbox">
+          <input type="email" name="email" value="" placeholder="EMAIL">
+        </div>
+
+        <div class="contact_textbox">
+          <input type="text" name="subject" value="" placeholder="SUBJECT*" required>
+        </div>
+
+        <div class="contact_textbox">
+          <textarea name="textarea" rows="9" placeholder="YOUR MESSAGE"></textarea>
+        </div>
+
+        <button class="contact_button" name="send">SEND</button>
+
+      </form>
+
+    </div>
+
+    <!-- Footer Section -->
+    <%- include('./footer.ejs') %>
+
+  </body>
+</html>

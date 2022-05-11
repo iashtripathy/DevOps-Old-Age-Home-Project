@@ -1,0 +1,29 @@
+<!-- Header Section, or Navigation Bar-->
+<header style="z-index:2000;">
+    <img class="icon" src="images/website_icon.png" alt="icon">
+
+    <a class="brand_name" href="/">Old Age Home</a>
+
+    <nav>
+      <ul class="nav_links">
+        <!-- <li class="nav_item"><a href="#">About Us</a></li> -->
+        <% if(!loginStatus){ %>
+            <li class="nav_item"><a href="/">Home</a></li>
+            <li class="nav_item"><a href="/adoption">Adopt</a></li>
+            <li class="nav_item"><a href="/donation">Donate</a></li>
+            <li class="nav_item"><a href="/report-homeless">Report Homeless</a></li>
+            <li class="nav_item"><a href="/admin-login">Admin Login</a></li>            
+            <% } else { %>  
+                <li class="nav_item"><a href="/">Home</a></li>
+                <li class="nav_item"><a href="/homeless-persons-data">Complaints</a></li>
+                <li class="nav_item"><a href="/meeting-data">Meeting</a></li>
+                <li class="nav_item"><a href="/admin-logout">logout</a></li>
+                            
+        <% } %>
+
+
+        <!-- <li class="nav_item"><a href="#">Contact Us</a></li> -->
+      </ul>
+    </nav>
+    
+</header>

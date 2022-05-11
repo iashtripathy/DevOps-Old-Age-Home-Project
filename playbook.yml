@@ -1,0 +1,19 @@
+---
+- name: Pull docker image from docker hub
+  hosts: aws
+  remote_user: ec2-user
+  tasks:
+    - name: stop container
+      command: docker kill spe_final
+
+    - name: remove container
+      command: docker rm spe_final
+
+    - name: deleting image
+      command: docker rmi gururajmujumdar/spefinal:latest
+   
+    - name: pull new image
+      command: docker pull gururajmujumdar/spefinal:latest
+
+    - name: run image
+      command: docker run -d --name spe_final -p 3000:3000 gururajmujumdar/spefinal:latest

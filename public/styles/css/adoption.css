@@ -1,0 +1,241 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap'); /* heading font */
+@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap'); /* brand name font */
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap'); /* reading texts font */
+
+/* Universal CSS Style */
+* {
+  box-sizing: border-box; /* setting the box property in order to make things simple */
+  margin: 0;
+  padding: 0;
+  transition: 1s; /* transition when the page is opened */
+
+}
+
+.horizontal_line {
+  width: 15%;
+  border-style: dotted none none;
+  border-color: #00adb5;
+  border-width: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Header Section, or Navigation Bar */
+header {
+  display: flex; /* make child boxes horizontal */
+  align-items: center; /* making all the child boxes center to each other in the parent flex box */
+  justify-content: flex-end; /* sending the elements to the right */
+  padding: 5px 4%; /* top, down is 5px & left, right is 4% */
+/*   background-color: rgb(202 200 200); */
+  background-color: #333;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important; */
+  -webkit-box-shadow: 0px 0px 14px 0px rgb(0 0 0 / 75%);
+  position: fixed; /* fixing the nav bar to the top */
+  width: 100%; /* expand to the screen size */
+  z-index: 10; /* make every animation to go behind the nav bar */
+}
+
+.icon {
+  height: 55px;
+  width: 55px;
+  cursor: pointer; /* makes the pointer to the images */
+  margin-top:10px;
+}
+
+.brand_name {
+  text-decoration: none; /* removed the underline */
+  
+  font-weight: bolder;
+  font-size: 2rem;
+  color: white;
+  padding-left: 15px;
+  margin-right: auto; /* moving the logo and brand name to the left */
+}
+
+.nav_links {
+  list-style: none; /* removing the dots before every list item */
+}
+
+.nav_item {
+  display: inline-block; /* makes the list items horizontal */
+  padding: 0px 15px; /* top, down is 0px & left, right is 15px */
+}
+
+.nav_item a {
+  font-size: 1.2rem;
+  text-decoration: none; /* removed the underline */
+  color: white;
+}
+
+.nav_item a:hover {
+  color: #ff1617;
+}
+
+/* Introduction Section */
+.intro_section {
+  display: flex; /* make child boxes horizontal */
+  align-items: center; /* making all the child boxes center to each other in the parent box */
+  padding: 8rem 10% 3rem; /* top is 8rem, down is 3rem & left,right is 10% */
+}
+
+.intro_image {
+  width: 350px;
+  height: 350px;
+  cursor: pointer; /* makes the pointer to the images */
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.intro_lines {
+  text-align: center; /* center aligned texts */
+  margin-left: 5rem;
+}
+
+.intro_heading {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  
+  color: #ff1313b5;
+}
+
+.intro_description {
+  font-size: 1.5rem;
+  font-family: "Gaegu", sans-serif; /* google font */
+}
+
+/* Adoption Policies */
+.policies_section {
+  
+  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
+}
+
+.policies_heading {
+  color: #ff1313;
+  text-align: center;
+  font-size: 3rem;
+  
+}
+
+.policies_images {
+  display: flex; /* making child boxes parallel */
+  justify-content: center; /* evenly space between the child boxes */
+}
+
+.policies_images img {
+  height: 350px;
+  width: 450px;
+  border-radius: 0.4rem;
+  cursor: pointer; /* makes the pointer to the images */
+}
+
+.policies_description {
+  font-size: 1.5rem;
+  font-family: "Gaegu", sans-serif; /* google font */
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Form Section */
+.form_section {
+  background-color: #d9e7e8;
+  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
+}
+
+.form_heading {
+  color: #ff1313;
+  text-align: center;
+  font-size: 3rem;
+
+}
+
+.form_description {
+  text-align: center; /* center aligned texts */
+  font-size: 1.5rem;
+}
+
+.meeting_form {
+  width: 80%;
+  background-color: #fff;
+  margin: 3rem auto;
+  padding: 2rem 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.contact_textbox {
+  border: 0.2rem solid #d9e7e8;
+  margin: 1.5rem 5rem;
+
+}
+
+.contact_textbox input, .contact_textbox textarea {
+  width: 100%;
+  height:40px;
+  border: none;
+  /* background: none; */
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.contact_textbox textarea {
+  resize: none;
+  height:300px;
+}
+
+.contact_label {
+  font-size: 2rem;
+}
+
+.contact_textbox_selectors {
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+}
+
+.contact_date_input {
+  padding: 0.5rem 0rem;
+}
+
+.contact_button {
+  background-color: #d9e7e8;
+  padding: 1rem 4rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.contact_button:hover {
+  color: #ff1617;
+}
+
+
+/* Footer Section */
+footer {
+  height:65px;
+  background-color: #121212;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important; */
+  -webkit-box-shadow: 0px 0px 14px 0px rgb(0 0 0 / 75%);
+  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
+}
+
+.footer_logos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+
+
+.footer_copyright { /* copyright logo */
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin:0 auto;
+  color:white;
+}
