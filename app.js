@@ -15,7 +15,7 @@ const authenticate = require('./authenticate');
 const app = express();
 app.use(cookieParser());
 
-const dbURL = "mongodb+srv://admin:admin1234@cluster0.6jspo.mongodb.net/homeDB?retryWrites=true&w=majority"
+const dbURL = "mongodb+srv://usernmae:password@cluster0.6jspo.mongodb.net/homeDB?retryWrites=true&w=majority"
 //const dbURL = 'mongodb://mongo:27017/homeDB'
 mongoose.connect(dbURL, 
     {useNewUrlParser: true, useUnifiedTopology: true}
